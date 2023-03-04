@@ -6,6 +6,7 @@ import './App.css'
 let targetNumber = createTargetNumber();
 function App() {
   const [currentNumber, setCurrentNumber] = useState(0);
+  const [targetNumber, setTargetNumber] = useState(createTargetNumber());
 
   function add3(){
     let result = currentNumber + 3;
@@ -25,6 +26,9 @@ function App() {
   function reset(){
     let result = 0;
     setCurrentNumber(result);
+    let newTargetNumber = createTargetNumber();
+    setTargetNumber(newTargetNumber);
+    
   }
 
   if (currentNumber === targetNumber){
